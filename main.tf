@@ -1,5 +1,5 @@
 resource "tfe_workspace" "ec2" {
-  name         = "EC2-Workspace"
+  name         = var.ec2_workspace_name
   organization = var.tfe_organization_name
   vcs_repo {
     identifier     = "${var.github_user}/AWS-and-Terraform"
@@ -10,6 +10,7 @@ resource "tfe_workspace" "ec2" {
   execution_mode      = "remote"
   working_directory   = "/Homework4/EC2"
 }
+
 resource "tfe_variable" "instances_to_create" {
   key          = "instances_to_create"
   value        = var.instances_to_create
@@ -58,3 +59,10 @@ resource "tfe_variable" "aws_default_region" {
   category     = "env"
 }
 
+resource "tfe_variable" "vpc_workspace_name" {
+  key          = "vpc_workspace_name"
+  value        = var.vpc_workspace_name
+  description  = "VPC Workspace Name"
+  workspace_id = tfe_workspace.ec2.id
+  category     = "terraform"
+}

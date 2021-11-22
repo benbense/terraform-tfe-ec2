@@ -2,7 +2,6 @@ variable "tfe_organization_name" {
   description = "Terrafrom Cloud Organization Name"
   type        = string
 }
-
 variable "github_user" {
   description = "Github Username"
   type        = string
@@ -40,5 +39,13 @@ variable "aws_secret_acess_key" {
 }
 variable "aws_default_region" {
   description = "AWS Default Region"
+  type        = string
+}
+variable "ec2_workspace_name" {
+  description = "EC2 Workspace name"
+  type        = string
+}
+variable "vpc_workspace_name" {
+  description = "VPC Workspace name"
   type        = string
 }
