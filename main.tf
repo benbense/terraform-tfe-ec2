@@ -9,6 +9,7 @@ resource "tfe_workspace" "ec2" {
   global_remote_state = true
   execution_mode      = "remote"
   working_directory   = var.ec2_workspace_directory
+  auto_apply          = var.auto_apply
 }
 
 resource "tfe_variable" "instances_to_create" {
