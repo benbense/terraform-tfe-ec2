@@ -58,9 +58,3 @@ variable "ec2_workspace_directory" {
   description = "Working directory for EC2 module"
   type        = string
 }
-
-variable "slack_webhook_url" {
-  description = "Slack Webhook URL for Notifications"
-  type        = string
-}
-
