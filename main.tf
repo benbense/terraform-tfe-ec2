@@ -71,6 +71,6 @@ resource "tfe_variable" "tfe_organization_name" {
   key          = "tfe_organization_name"
   value        = var.tfe_organization_name
   description  = "Terrafrom Cloud Organization Name"
-  workspace_id = tfe_workspace.vpc.id
+  workspace_id = tfe_workspace.ec2.id
   category     = "terraform"
 }
