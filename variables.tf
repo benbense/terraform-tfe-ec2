@@ -15,7 +15,7 @@ variable "github_branch" {
 }
 
 variable "instances_to_create" {
-  description = "Number of EC2 instances to create"
+  description = "Number of servers instances to create"
   type        = number
 }
 variable "instance_type" {
@@ -41,8 +41,8 @@ variable "aws_default_region" {
   description = "AWS Default Region"
   type        = string
 }
-variable "ec2_workspace_name" {
-  description = "EC2 Workspace name"
+variable "servers_workspace_name" {
+  description = "servers Workspace name"
   type        = string
 }
 variable "vpc_workspace_name" {
@@ -54,8 +54,8 @@ variable "workspace_repo_identifier" {
   type        = string
 }
 
-variable "ec2_workspace_directory" {
-  description = "Working directory for EC2 module"
+variable "servers_workspace_directory" {
+  description = "Working directory for servers module"
   type        = string
 }
 
